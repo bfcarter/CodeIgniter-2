@@ -44,9 +44,9 @@
                         <li class="active"><a href="index.php/welcome/signup">Register</a></li>
                         <li class="active"><a href="<?php echo base_url(); ?>index.php/welcome/login">Login
                         </a></li>
-                        <li class="active"><a href="<?php echo base_url(); ?>index.php/image_controller/upload_form">Upload Image
+                        <li class="active"><a href="<?php echo base_url(); ?>index.php/welcome/do_upload">Upload Pattern
                         </a></li>
-                        <li class="active"><a href="<?php echo base_url(); ?>index.php/image_controller/image_gallery">Pattern Gallery
+                        <li class="active"><a href="<?php echo base_url(); ?>index.php/welcome/image_gallery">Pattern Gallery
                         </a></li>
                         <li class="active"><a href="index.php/contactform/contact">Contact Us
                         </a></li>
