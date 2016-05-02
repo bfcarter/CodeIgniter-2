@@ -1,4 +1,3 @@
-
 <?php
 class contactform extends CI_Controller
 {
@@ -32,7 +31,7 @@ class contactform extends CI_Controller
             $message = $this->input->post('message');
 
             //set to_email id to which you want to receive mails
-            $to_email = 'brittnicarter@gmail.com';
+            $to_email = 'user@gmail.com';
 
             //configure email settings
             $config['protocol'] = 'smtp';

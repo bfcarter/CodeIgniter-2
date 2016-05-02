@@ -42,11 +42,15 @@
                     <ul class="nav">
                         <li class="active"><a href="<?php echo base_url(); ?>">Home</a></li>
                         <li class="active"><a href="index.php/welcome/signup">Register</a></li>
-                        <li class="active"><a href="index.php/welcome/login">Login
+                        <li class="active"><a href="<?php echo base_url(); ?>index.php/welcome/login">Login
+                        </a></li>
+                        <li class="active"><a href="<?php echo base_url(); ?>index.php/image_controller/upload_form">Upload Image
+                        </a></li>
+                        <li class="active"><a href="<?php echo base_url(); ?>index.php/image_controller/image_gallery">Pattern Gallery
                         </a></li>
                         <li class="active"><a href="index.php/contactform/contact">Contact Us
                         </a></li>
-                       <li class="active"><a href="index.php/welcome/logout">Logout
+                       <li class="active"><a href="<?php echo base_url(); ?>index.php/welcome/logout">Logout
                         </a></li>
                     </ul>        
                 </div><!--/.nav-collapse -->

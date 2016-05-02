@@ -55,10 +55,21 @@ class Welcome extends CI_Controller {
                 else
                 {
                     $this->load->model('Sample_model');
-                    $email = $_POST['email'];
-                    $password = md5($_POST['Password']);
-                    if($this->Sample_model->check_user($email,$password) == 1)
+
+                    $credentials = array(
+                    'email' => $_POST['email'],
+                    'password' => md5($_POST['password'])
+                    );
+
+                    $user =$this->Sample_model->check_user($credentials);
+                        if($user->num_rows() == 1)
                     {
+                        $user = $user ->row();
+                        $session = array(
+                            'name' => $user->name,
+                            'is_logged_in' => TRUE
+                            );
+                        $this->session->set_userdata($session);
                         redirect('welcome/member_area');
                     } else {
                         $data['view'] = 'error_view';
@@ -72,10 +83,14 @@ class Welcome extends CI_Controller {
 
         public function member_area()
         {
+            if(isset($_SESSION['is_logged_in']))
+            {
+            $data['name'] = $_SESSION['name'];
             $data['view'] = 'memberarea_view';
             $this->load->view('load_view', $data);
         }
-    
+            else        die('die');
+        }
               
                 function custom_rule($str)
         {
@@ -89,6 +104,16 @@ class Welcome extends CI_Controller {
                         return TRUE;
                 }
         }
+
+public function do_upload()
+{
+    $data['view'] = 'upload_form';
+    $this->load->view('load_view', $data);
+
+
+}
+
+
         function logout()
 	{
 		$this->session->sess_destroy();

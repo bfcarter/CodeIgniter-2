@@ -14,6 +14,8 @@ class Members_only extends CI_Controller {
 		if(!isset($is_logged_in) || $is_logged_in != true)
 		{
                     redirect('welcome/login');
+
+                    
 		}	
           
       }

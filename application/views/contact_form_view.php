@@ -1,9 +1,19 @@
-
- <section class="title">
-    <div class="container">
-          <h1>Contact Us</h1>   
-    </div>
-  </section>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeIgniter Contact Form Example</title>
+    <!--load bootstrap css-->
+    <link href="<?php echo base_url("path/to/bootstrap/bootstrap.css"); ?>" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 well">
+            <?php $attributes = array("class" => "form-horizontal", "name" => "contactform");
+            echo form_open("contactform/index", $attributes);?>
+            <fieldset>
+            <legend>Contact Form</legend>
             <div class="form-group">
                 <div class="col-md-12">
                     <label for="name" class="control-label">Name</label>
@@ -43,14 +53,17 @@
                     <span class="text-danger"><?php echo form_error('message'); ?></span>
                 </div>
             </div>
+
             <div class="form-group">
                 <div class="col-md-12">
                     <input name="submit" type="submit" class="btn btn-primary" value="Send" />
                 </div>
             </div>
-            
+            </fieldset>
             <?php echo form_close(); ?>
             <?php echo $this->session->flashdata('msg'); ?>
         </div>
-    
-
+    </div>
+</div>
+</body>
+</html>
