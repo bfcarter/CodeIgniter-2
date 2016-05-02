@@ -160,9 +160,6 @@ public function do_upload()
          $this->zip->download('images.zip');           
     }
         
-}
-
-
 
 
 
@@ -175,3 +172,4 @@ public function do_upload()
         
 
 
+}
