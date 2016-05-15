@@ -61,10 +61,17 @@ class Welcome extends CI_Controller {
                     'password' => md5($_POST['password'])
                     );
 
+
+
+
                     $user =$this->Sample_model->check_user($credentials);
                         if($user->num_rows() == 1)
                     {
                         $user = $user ->row();
+
+
+
+
                         $session = array(
                             'name' => $user->name,
                             'is_logged_in' => TRUE
@@ -167,7 +174,7 @@ public function do_upload()
         function logout()
 	{
 		$this->session->sess_destroy();
-		$this->index();
+		redirect('welcome/login');
 	}
         
 

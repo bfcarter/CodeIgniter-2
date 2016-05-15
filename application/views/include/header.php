@@ -30,6 +30,7 @@
 
     <!--Header-->
     <header class="navbar navbar-fixed-top">
+    <?php //var_dump( $this->session -> userdata["is_logged_in"]);?> 
         <div class="navbar-inner">
             <div class="container">
                 <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -42,8 +43,12 @@
                     <ul class="nav">
                         <li class="active"><a href="<?php echo base_url(); ?>">Home</a></li>
                         <li class="active"><a href="index.php/welcome/signup">Register</a></li>
-                        <li class="active"><a href="<?php echo base_url(); ?>index.php/welcome/login">Login
-                        </a></li>
+                        <li class="active"><a href="<?php echo base_url(); ?>index.php/welcome/login">Login</a></li>
+                        
+                        <?php if (isset($this->session -> userdata ['is_logged_in']) ) {?> 
+                        <li class="active"><a href="<?php echo base_url(); ?>index.php/welcome/member_area">Profile</a></li>
+                        <?php } ?> 
+
                         <li class="active"><a href="<?php echo base_url(); ?>index.php/welcome/do_upload">Upload Pattern
                         </a></li>
                         <li class="active"><a href="<?php echo base_url(); ?>index.php/welcome/image_gallery">Pattern Gallery

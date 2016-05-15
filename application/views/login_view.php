@@ -43,10 +43,7 @@
         
 
 </div>
-<div id="main">
-<div id="login">
-<?php echo "<a href='$login_url'><img class='fb' src=".base_url()."images/fb.png"."></a>"; ?>
-</div>
+
 
         </div>
       </fieldset>
