@@ -10,14 +10,14 @@ return $query_result;
 function show_user_id($data){
 $this->db->select('*');
 $this->db->from('users');
-$this->db->where('user_id', $data);
+$this->db->where('user_name', $data);
 $query = $this->db->get();
 $result = $query->result();
 return $result;
 }
 // Update Query For Selected User
-function update_user_id1($id,$data){
-$this->db->where('user_id', $id);
+function update_user_name1($name,$data){
+$this->db->where('user_name', $name);
 $this->db->update('users', $data);
 }
 }
