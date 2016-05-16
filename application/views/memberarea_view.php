@@ -33,9 +33,7 @@
 <input type="submit" value="Upload" />
 
 </form>
-<h2> View Pattern Gallery <h2>
 
-<input type="submit" value="View" />
 
 </div>
 </div>

@@ -42,7 +42,7 @@
                 <div class="nav-collapse collapse pull-right">
                     <ul class="nav">
                         <li class="active"><a href="<?php echo base_url(); ?>">Home</a></li>
-                        <li class="active"><a href="index.php/welcome/signup">Register</a></li>
+                        <li class="active"><a href="<?php echo base_url(); ?>index.php/welcome/signup">Register</a></li>
                         <li class="active"><a href="<?php echo base_url(); ?>index.php/welcome/login">Login</a></li>
                         
                         <?php if (isset($this->session -> userdata ['is_logged_in']) ) {?> 
