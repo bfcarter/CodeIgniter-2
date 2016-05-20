@@ -20,7 +20,7 @@ $data = array(
 );
 $this->update_model->update_name1($name,$data);
 $this->show_name();
+$this ->load->view('memberarea_view', $data);
 }
 }
-
 ?>
