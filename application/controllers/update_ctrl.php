@@ -13,6 +13,7 @@ $this->load->view('memberarea_view', $data);
 function update_name1() {
 $name= $this->input->post('uname');
 $data = array(
+
 'name' => $this->input->post('uname'),
 'email' => $this->input->post('uemail'),
 'password' => $this->input->post('upassword')
@@ -21,4 +22,5 @@ $this->update_model->update_name1($name,$data);
 $this->show_name();
 }
 }
+
 ?>
