@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeIgniter Contact Form Example</title>
-    <!--load bootstrap css-->
-    <link href="<?php echo base_url("path/to/bootstrap/bootstrap.css"); ?>" rel="stylesheet" type="text/css" />
-</head>
+
 <body>
 <div class="container">
     <div class="row">
@@ -20,7 +15,7 @@
                 </div>
                 <div class="col-md-12">
                     <input class="form-control" name="name" placeholder="Your Full Name" type="text" value="<?php echo set_value('name'); ?>" />
-                    <span class="text-danger"><?php echo form_error('name'); ?></span>
+                    <span class="text-danger"></span>
                 </div>
             </div>
 
