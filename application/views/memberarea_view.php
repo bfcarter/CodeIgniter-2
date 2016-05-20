@@ -33,6 +33,38 @@
 <input type="submit" value="Upload" />
 
 </form>
+<!--=========== Delete ===========-->
+
+<body>
+<div id="container">
+<div id="wrapper">
+<h1>Delete </h1>
+<div id="menu">
+<p>Click On Menu</p>
+<!--====== Displaying Fetched Names from Database in Links ========-->
+<ol>
+<?php foreach ($users as $user): ?>
+<li><a href="<?php echo base_url() . "index.php/delete_ctrl/show_name/" . $user->name; ?>"><?php echo $user->name; ?></a>
+</li><?php endforeach; ?>
+</ol>
+</div>
+<div id="detail">
+<!--====== Displaying Fetched Details from Database ========-->
+<?php foreach ($single_user as $user): ?>
+<p>user Detail</p>
+<?php echo $user->name; ?>
+<?php echo $user->email; ?>
+<?php echo $user->password; ?>
+
+<!--====== Delete Button ========-->
+<a href="<?php echo base_url() . "index.php/delete_ctrl/delete_name/" . $student->name; ?>">
+<button>Delete</button></a>
+<?php endforeach; ?>
+</div>
+</div>
+</div>
+</body>
+</html>
 
 
 </div>
