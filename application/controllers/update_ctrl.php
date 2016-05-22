@@ -12,6 +12,7 @@ $this->load->view('memberarea_view', $data);
 }
 function update_name1() {
 $name= $this->input->post('uname');
+echo "uname";
 $data = array(
 
 'name' => $this->input->post('uname'),
