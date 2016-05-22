@@ -5,7 +5,7 @@ class image_controller extends CI_Controller {
   
     public function index()
     {
-           $data['view'] = 'display_view';
+           $data['view'] = 'memberarea_view';
            $this->load->view('load_view',$data);
         }
     public function do_upload()
@@ -52,6 +52,7 @@ class image_controller extends CI_Controller {
          $this->load->helper('directory');
          $map = directory_map('./upload/');
          $base_path = base_url()."upload/";
+
          foreach ($map as $filename)
          {
              $data = file_get_contents($base_path.$filename);
@@ -62,3 +63,4 @@ class image_controller extends CI_Controller {
     }
         
 }
+?>
