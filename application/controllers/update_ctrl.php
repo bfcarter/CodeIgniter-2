@@ -1,5 +1,6 @@
 <?php
 class update_ctrl extends CI_Controller{
+
 function __construct(){
 parent::__construct();
 $this->load->model('update_model');
@@ -20,7 +21,7 @@ $data = array(
 );
 $this->update_model->update_user_id1($id,$data);
 $this->show_user_id();
-
+$this->load->view('successupdate', $data);
 }
 }
 ?>
