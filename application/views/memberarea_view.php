@@ -14,7 +14,8 @@
 
 <p>Edit Detail & Click Update Button</p>
 <form method="post" action="<?php echo base_url() . "index.php/update_ctrl/update_user_name1"?>">
-<label>Name :</label>
+<label>Name :</label> 
+<?php echo "cheese" ?>
 <input type="text" name="uname" >
 <label>Email :</label>
 <input type="text" name="uemail" >
