@@ -13,9 +13,8 @@
 <!-- Fetching All Details of Selected User From Database And Showing In a Form -->
 
 <p>Edit Detail & Click Update Button</p>
-<form method="post" action="<?php echo base_url() . "index.php/update_ctrl/update_user_name1"?>">
+<form method="post" action="<?php echo base_url() . "index.php/update_ctrl/update_user_id1"?>">
 <label>Name :</label> 
-<?php echo "cheese" ?>
 <input type="text" name="uname" >
 <label>Email :</label>
 <input type="text" name="uemail" >

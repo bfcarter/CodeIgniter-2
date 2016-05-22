@@ -7,18 +7,19 @@ $query_result = $query->result();
 return $query_result;
 }
 // Function To Fetch Selected Record
-function show_name($data){
+function show_user_id($data){
 $this->db->select('*');
 $this->db->from('users');
-$this->db->where('name', $data);
+$this->db->where('user_id', $data);
 $query = $this->db->get();
 $result = $query->result();
 return $result;
 }
 // Update Query For Selected User
-function update_name1($name,$data){
-$this->db->where('name', $name);
+function update_user_id1($user_id,$data){
+$this->db->where('user_id', $id);
 $this->db->update('users', $data);
 }
 }
 ?>
+
