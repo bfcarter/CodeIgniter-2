@@ -11,7 +11,7 @@ $data['single_user'] = $this->update_model->show_user_id($id);
 $this->load->view('memberarea_view', $data);
 }
 function update_user_id1() {
-$name= $this->input->post('user_id');
+$id= $this->input->post('user_id');
 $data = array(
 
 'name' => $this->input->post('uname'),
@@ -20,7 +20,7 @@ $data = array(
 );
 $this->update_model->update_user_id1($id,$data);
 $this->show_user_id();
-$this ->load->view('memberarea_view', $data);
+
 }
 }
 ?>

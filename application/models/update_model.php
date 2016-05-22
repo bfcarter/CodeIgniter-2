@@ -16,7 +16,7 @@ $result = $query->result();
 return $result;
 }
 // Update Query For Selected User
-function update_user_id1($user_id,$data){
+function update_user_id1($id,$data){
 $this->db->where('user_id', $id);
 $this->db->update('users', $data);
 }
