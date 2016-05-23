@@ -23,5 +23,13 @@ $this->update_model->update_user_id1($id,$data);
 $this->show_user_id();
 $this->load->view('successupdate', $data);
 }
+
+public function index()
+      {
+                $data['name'] = $_SESSION['name'];
+                $data['view'] = 'memberarea_view';
+                $this->load->view('load_view',$data);
+          
+      }
 }
 ?>
