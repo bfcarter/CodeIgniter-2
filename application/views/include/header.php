@@ -53,7 +53,7 @@
                         </a></li>
                         <li class="active"><a href="<?php echo base_url(); ?>index.php/welcome/image_gallery">Pattern Gallery
                         </a></li>
-                        <li class="active"><a href="<?php echo base_url(); ?>index.php/contactform/contact_form">Contact Us
+                        <li class="active"><a href="<?php echo base_url(); ?>index.php/contactform/contact">Contact Us
                         </a></li>
                        <li class="active"><a href="<?php echo base_url(); ?>index.php/welcome/logout">Logout
                         </a></li>
