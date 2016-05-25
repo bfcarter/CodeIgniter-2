@@ -12,24 +12,37 @@ $data['single_user'] = $this->update_model->show_user_id($id);
 $this->load->view('memberarea_view', $data);
 }
 function update_user_id1() {
-$id= $this->input->post('user_id');
+$id= $this->session->userdata['id'];
 $data = array(
 
 'name' => $this->input->post('uname'),
 'email' => $this->input->post('uemail'),
-'password' => $this->input->post('upassword')
+'password' => md5($this->input->post('upassword'))
 );
+echo $id;
 $this->update_model->update_user_id1($id,$data);
+
+               
+                $config['upload_path']          = './images/';
+                $config['allowed_types']        = 'gif|jpg|png';
+                
+
+                $this->load->library('upload', $config);
+                $this->load->helper('directory');
+                if ( ! $this->upload->do_upload())
+                {                    
+                      echo "error"; 
+                }
+                else
+                {
+                          echo "success";         
+                }  
 $this->show_user_id();
 $this->load->view('successupdate', $data);
 }
 
-public function index()
-      {
-                $data['name'] = $_SESSION['name'];
-                $data['view'] = 'memberarea_view';
-                $this->load->view('load_view',$data);
-          
-      }
+
+
+
 }
 ?>

@@ -62,17 +62,20 @@ class Welcome extends CI_Controller {
                     );
 
 
-
+                    
 
                     $user =$this->Sample_model->check_user($credentials);
+                        
                         if($user->num_rows() == 1)
+
                     {
                         $user = $user ->row();
 
-
+                    
 
 
                         $session = array(
+                            'id'=> $user-> user_id,
                             'name' => $user->name,
                             'is_logged_in' => TRUE
                             );
