@@ -3,6 +3,7 @@ class update_ctrl extends CI_Controller{
 
 function __construct(){
 parent::__construct();
+$this->load->helper(array('form', 'url'));
 $this->load->model('update_model');
 }
 function show_user_id() {
@@ -25,6 +26,9 @@ $this->update_model->update_user_id1($id,$data);
                
                 $config['upload_path']          = './images/';
                 $config['allowed_types']        = 'gif|jpg|png';
+                $config['max_size']             = 100;
+                $config['max_width']            = 1024;
+                $config['max_height']           = 768;
                 
 
                 $this->load->library('upload', $config);
@@ -37,8 +41,7 @@ $this->update_model->update_user_id1($id,$data);
                 {
                           echo "success";         
                 }  
-$this->show_user_id();
-$this->load->view('successupdate', $data);
+
 }
 
 

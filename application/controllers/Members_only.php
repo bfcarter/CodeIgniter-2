@@ -26,5 +26,7 @@ class Members_only extends CI_Controller {
                 $this->load->view('load_view',$data);
           
       }
-        
+        <?php echo form_input('name',
+    ($ae == 'edit') ? $records[0]->name : set_value('name')
+); ?>
 }
