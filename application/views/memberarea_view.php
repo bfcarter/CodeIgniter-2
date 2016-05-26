@@ -12,11 +12,11 @@
 <p>Edit Detail & Click Update Button</p>
 <form method="post" action="<?php echo base_url() . "index.php/update_ctrl/update_user_id1"?>">
 <label>Name :</label> 
-<input type="text" name="uname" >
+<input type="text" name="uname" value="<?php echo set_value('name'); ?>">
 <label>Email :</label>
-<input type="text" name="uemail" >
+<input type="text" name="uemail" value="<?php echo set_value('email'); ?>">
 <label>Password :</label>
-<input type="text" name="upassword" >
+<input type="text" name="upassword" value="<?php echo set_value('input_name',@$input_value); ?>">
 
 <input type="submit" id="submit" name="usubmit" value="Update">
 </form>
