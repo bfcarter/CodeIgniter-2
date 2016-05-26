@@ -5,7 +5,7 @@
         <?php 
         $preview = 1;
         foreach ($map as $filename) {
-        $base_path = base_url()."upload/";
+        $base_path = base_url()."images/";
         ?>    
             <li>
                 <div class="preview">

@@ -41,7 +41,8 @@ $this->update_model->update_user_id1($id,$data);
                 {
                           echo "success";         
                 }  
-
+$this->show_user_id();
+$this->load->view('successupdate', $data);
 }
 
 
