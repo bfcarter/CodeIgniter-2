@@ -1,39 +1,41 @@
-<?php echo "<h4>".$msg."</h4>"; ?>
-
+<?php echo "<h4>".$msg."</4>"; ?>
+<h2>Pattern Gallery<h2>
  <section id="portfolio" class="container main">    
         <ul class="gallery col-4">
         <?php 
-        $preview = 1;
+         $priview = 1;
         foreach ($map as $filename) {
-        $base_path = base_url()."images/";
-        ?>    
+        $base_path = base_url()."upload/";  
+         
+         ?>    
             <li>
-                <div class="preview">
+                <div class="priview">
                     <img alt=" " src="<?php echo $base_path.$filename ?>">
                     <div class="overlay">
                     </div>
                     <div class="links">
-                        <a data-toggle="model" href="#model-<?php echo $preview ?>"><i class="icon-eye-open"></i></a><a href="<?php echo site_url("image_controller/download_image/$filename") ?>"><i class="icon-link"></i></a>                                
+                        <a data-toggle="modal" href="#modal-<?php echo $priview ?>"><i class="icon-eye-open"></i></a><a href="<?php echo site_url("image_controller/download_image/$filename") ?>"><i class="icon-link"></i></a>                                
                     </div>
                 </div>
                 <div class="desc">
                     <h5><?php $filename ?></h5>
                     
                 </div>
-                <div id="model-<?php echo $preview ?>" class="model hide fade">
-                    <a class="close-model" href="javascript:;" data-dismiss="model" aria-hidden="true"><i class="icon-remove"></i></a>
-                    <div class="model-body">
+                <div id="modal-<?php echo $priview ?>" class="modal hide fade">
+                    <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
+                    <div class="modal-body">
                         <img src="<?php echo $base_path.$filename ?>" alt=" " width="100%" style="max-height:400px">
                     </div>
                 </div>                 
             </li>
         <?php 
         
-         $preview = $preview +1;  
+         $priview = $priview +1;  
         
         } 
         
         ?>
         
     </section>
-<?php echo '<p>'.anchor('image_controller/download_all','Download All'); ?>
+<?php echo '<p>'.anchor('Welcome/download_all','Download All'); ?>
+
