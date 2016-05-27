@@ -41,7 +41,7 @@
                 <a id="logo" class="pull-left" href="<?php echo base_url(); ?>"></a>
                 <div class="nav-collapse collapse pull-right">
                     <ul class="nav">
-                        <li class="active"><a href="<?php echo base_url(); ?>">Home</a></li>
+                        <li class="active"><a href="<?php echo base_url(); ?>index.php/welcome/login">Home</a></li>
                         <li class="active"><a href="<?php echo base_url(); ?>index.php/welcome/signup">Register</a></li>
                         <li class="active"><a href="<?php echo base_url(); ?>index.php/welcome/login">Login</a></li>
                         
@@ -49,8 +49,7 @@
                         <li class="active"><a href="<?php echo base_url(); ?>index.php/welcome/member_area">Profile</a></li>
                         <?php } ?> 
 
-                        <li class="active"><a href="<?php echo base_url(); ?>index.php/welcome/do_upload">Upload Pattern
-                        </a></li>
+                    
                         <li class="active"><a href="<?php echo base_url(); ?>index.php/welcome/image_gallery">Pattern Gallery
                         </a></li>
                         <li class="active"><a href="<?php echo base_url(); ?>index.php/contactform/contact">Contact Us
