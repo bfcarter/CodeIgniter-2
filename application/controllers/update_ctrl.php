@@ -5,6 +5,7 @@ function __construct(){
 parent::__construct();
 $this->load->helper(array('form', 'url'));
 $this->load->model('update_model');
+$this->load->view('load_view');
 }
 function show_user_id() {
 $id = $this->uri->segment(3);

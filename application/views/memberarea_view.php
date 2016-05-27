@@ -16,7 +16,7 @@
 <label>Email :</label>
 <input type="text" name="uemail" value="<?php echo set_value('uemail'); ?>">
 <label>Password :</label>
-<input type="text" name="upassword" value="<?php echo set_value('upassword'); ?>">
+<input type="text" name="upassword" >
 
 <input type="submit" id="submit" name="usubmit" value="Update">
 </form>
